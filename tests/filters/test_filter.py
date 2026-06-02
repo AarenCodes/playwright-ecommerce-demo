@@ -47,7 +47,7 @@ def test_sort_price_low_to_high(page: Page):
     print("\n [STEP 2] Sort by price (low to high)")
     page.select_option('[data-test="product-sort-container"]','lohi')
 
-    print("\n [STEP 4] Get the price elements and extract their text content, convert to float, and assert the first item is the cheapest and the last item is the most expensive")
+    print("\n [STEP 3] Get the price elements and extract their text content, convert to float, and assert the first item is the cheapest and the last item is the most expensive")
 # Get the price elements and extract their text content, convert to float, and assert the first item is the cheapest and the last item is the most expensive
     prices = page.locator(".inventory_item_price").all_text_contents()
     prices = [float(price.replace("$", "")) for price in prices]
